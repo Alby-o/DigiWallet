@@ -144,7 +144,7 @@ button:focus {
   justify-content: space-around;
 }
 
-#login h1, #index h1, #success h1, #login-container, .lock {
+#login h1, #index h1, #login-container, .lock {
   margin-bottom: auto;
 }
 
@@ -203,4 +203,8 @@ button:focus {
 /* Success */
 .fa-check-circle.icon {
   color: #51ad49;
+}
+
+#success .icon {
+  margin: auto;
 }
