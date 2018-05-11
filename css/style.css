@@ -18,6 +18,15 @@ h1 {
   color: white;
 }
 
+@keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
 /* Login Page */
 
 #login {
@@ -49,20 +58,33 @@ h1 {
 #login-form {
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 #login-form input {
   margin: 5px 0;
 }
 
+input[type="text"], input[type="password"] {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .feedback {
   opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  margin: auto;
+  width: 60%;
   padding: 5px 10px;
-  margin: 10px;
   border: 2px solid black;
   border-radius: 10px;
   transition: all 0.5s ease;
   color: #444;
+  text-align: center;
 }
 
 .success {

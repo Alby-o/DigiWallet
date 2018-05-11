@@ -1,17 +1,21 @@
 $(document).ready(function() {
   $("#login-form").submit(function(event) {
-    var email = $("#email").val();
-    var password = $("#password").val();
+    var email = $("#email").val().toLowerCase();
+    var password = $("#password").val().toLowerCase();
 
     if(email == "someone@email.com" && password == "password") {
-      $(".feedback").removeClass("fail").addClass("success").text("Login successful");
+      $(".feedback").removeClass("fail success").addClass("success").text("Login successful");
       setTimeout(function(){
-        window.location = "home.html";        
+        window.location = "home.html";
       }, 1000);
     } else {
-      $(".feedback").removeClass("success").addClass("fail").text("Username or password incorrect");
+      $(".feedback").removeClass("fail success").addClass("fail").text("Username or password incorrect");
     }
 
     event.preventDefault();
+  });
+
+  $(".feedback").click(function() {
+    $(this).css("opacity", 0);
   });
 });
