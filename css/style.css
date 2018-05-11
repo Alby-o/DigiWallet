@@ -1,3 +1,5 @@
+/* Generic Styling */
+
 html {
   width:100%;
   height:100%;
@@ -6,10 +8,6 @@ html {
 body {
   background: #EEE;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 }
 
 h1 {
@@ -20,11 +18,21 @@ h1 {
   color: white;
 }
 
-h1, #login-container, .lock {
+/* Login Page */
+
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#login h1, #login-container, .lock {
   margin-bottom: auto;
 }
 
 #login-container {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,16 +42,16 @@ h1, #login-container, .lock {
 .lock {
   text-align: center;
   width: 40%;
-  max-width: 100px;
+  max-width: 150px;
+  margin-top: 20px;
 }
 
-.vertical-form {
+#login-form {
   display: flex;
   flex-direction: column;
-
 }
 
-.vertical-form input {
+#login-form input {
   margin: 5px 0;
 }
 
@@ -54,16 +62,54 @@ h1, #login-container, .lock {
   border: 2px solid black;
   border-radius: 10px;
   transition: all 0.5s ease;
+  color: #444;
 }
 
 .success {
   opacity: 1;
   border-color: green;
-  background-color: lightgreen;
+  background-color: #d5fbd5;
 }
 
 .fail {
   opacity: 1;
   border-color: red;
-  background-color: pink;
+  background-color: #fdd;
+}
+
+
+/* Home Screen */
+.wallet {
+  width: 40%;
+  max-width: 150px;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#main-nav {
+  width: 80%;
+  margin: 40px auto;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#main-nav ul li a {
+  display: block;
+  margin: 10px 0;
+}
+
+.button, #main-nav ul li a  {
+  padding: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  background: #2983ff;
 }
