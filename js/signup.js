@@ -18,7 +18,7 @@ $(document).ready(function() {
   });
 
   $("#signup").submit(function(event) {
-    if($("#signup input").val() && validateEmail($("#email").val())) {
+    if(validateInputs()) {
       var firstname = $("#firstname").val();
       var surname = $("#surname").val();
       var email = $("#email").val();
@@ -47,4 +47,14 @@ $(document).ready(function() {
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+function validateInputs(){
+  var empty = $("#signup input").filter(function() {
+    return this.value === "";
+  });
+  if(empty.length || !validateEmail($("#email").val())) {
+    return false;
+  }
+  return true;
 }
