@@ -13,9 +13,28 @@ body {
 h1 {
   background: indigo;
   align-self: normal;
-  text-align: center;
   padding: 20px 0;
   color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+.back {
+  position: absolute;
+  color: white;
+  left: 10px;
+}
+
+.sign-out {
+  position: absolute;
+  color: white;
+  right: 10px;
+}
+
+.back:active, .sign-out:active {
+  color: #ddd;
 }
 
 @keyframes fade-out {
@@ -27,48 +46,45 @@ h1 {
     }
 }
 
-/* Login Page */
-
-#login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#login h1, #login-container, .lock {
-  margin-bottom: auto;
-}
-
-#login-container {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.lock {
-  text-align: center;
-  width: 40%;
-  max-width: 150px;
-  margin-top: 20px;
-}
-
-#login-form {
+/* Forms */
+form {
   display: flex;
   flex-direction: column;
   width: 60%;
+  margin: 0 auto 20px;
 }
 
-#login-form input {
+form input {
   margin: 5px 0;
 }
 
-input[type="text"], input[type="password"] {
+form label {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+
+input[type="text"], input[type="password"], input[type="number"], textarea {
   border: 2px solid #ccc;
   border-radius: 5px;
   padding: 5px;
+}
+
+input.warning {
+  background-color: #fffafa;
+  border-color: #ff6f6f;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #75afff;
+}
+
+#submit {
+  margin-top: 20px;
 }
 
 .feedback {
@@ -95,8 +111,55 @@ input[type="text"], input[type="password"] {
 
 .fail {
   opacity: 1;
-  border-color: red;
-  background-color: #fdd;
+  background-color: #fffafa;
+  border-color: #ff6f6f;
+}
+
+/* Index Page */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 40%;
+}
+
+.logo-container .wallet {
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 1em;
+  margin: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Login Page */
+
+#login, #index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#login h1, #index h1, #login-container, .lock {
+  margin-bottom: auto;
+}
+
+#login-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.lock {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50vw;
 }
 
 

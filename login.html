@@ -18,25 +18,29 @@
     <!-- User Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
   </head>
-  <body id="index">
-    <h1>DigiWallet</h1>
+  <body id="login">
+    <h1><a class="back" href="index.html"><i class="fa fa-angle-left"></i></a>DigiWallet</h1>
+    <i class="fa fa-lock lock"></i>
 
-    <h3 class="subtitle">Welcome to DigiWallet, your personal finance assistant</h3>
+    <section id="login-container">
+      <div class="feedback">
+        <span>Feedback Text</span>
+      </div>
 
-    <div class="logo-container">
-      <img class="wallet" src="img/wallet-2.png" alt="wallet">
-    </div>
+      <h2>Login</h2>
 
-    <nav id="main-nav">
-      <ul>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-      </ul>
-    </nav>
+      <form id="login-form" action="home.html">
+        <input id="email" type="text" placeholder="email">
+        <input id="password" type="password" placeholder="password">
+        <input id="submit" class="button" type="submit" value="Login">
+      </form>
+    </section>
 
     <!-- Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>

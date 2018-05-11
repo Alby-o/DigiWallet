@@ -16,6 +16,6 @@ $(document).ready(function() {
   });
 
   $(".feedback").click(function() {
-    $(this).css("opacity", 0);
+    $(this).removeClass("fail success");
   });
 });
