@@ -1,9 +1,13 @@
 $(document).ready(function() {
+  $.getScript("js/user.js");
+
   $("#login-form").submit(function(event) {
     var email = $("#email").val().toLowerCase();
     var password = $("#password").val().toLowerCase();
 
-    if(email == "someone@email.com" && password == "password") {
+    var user = JSON.parse(localStorage.getItem('user'));
+
+    if(email == user.email && password == user.password) {
       $(".feedback").removeClass("fail success").addClass("success").text("Login successful");
       setTimeout(function(){
         window.location = "home.html";

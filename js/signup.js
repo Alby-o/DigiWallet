@@ -1,7 +1,5 @@
 $(document).ready(function() {
-  $.getScript("js/user.js", function() {
-
-  });
+  $.getScript("js/user.js");
 
   $('#signup input').blur(function() {
       if( !$(this).val() ) {
@@ -17,6 +15,30 @@ $(document).ready(function() {
     } else {
       $(this).removeClass('warning');
     }
+  });
+
+  $("#signup").submit(function(event) {
+    if($("#signup input").val() && validateEmail($("#email").val())) {
+      var firstname = $("#firstname").val();
+      var surname = $("#surname").val();
+      var email = $("#email").val();
+      var password = $("#password").val();
+
+      var user = new User(firstname, surname, email, password);
+      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("success", "signup");
+    } else {
+      $("#signup input").filter(function() {
+        if(!$(this).val()) {
+          $(this).addClass('warning');
+        }
+      });
+      if(validateEmail($("#email").val())) {
+        $(this).addClass('warning');
+      }
+    }
+
+    event.preventDefault();
   });
 
 });
