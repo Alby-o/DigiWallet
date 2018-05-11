@@ -26,7 +26,8 @@ $(document).ready(function() {
 
       var user = new User(firstname, surname, email, password);
       localStorage.setItem("user", JSON.stringify(user));
-      localStorage.setItem("success", "signup");
+      localStorage.setItem("success", "signed up");
+      window.location = "success.html";
     } else {
       $("#signup input").filter(function() {
         if(!$(this).val()) {
