@@ -3,7 +3,6 @@
   <head>
     <title>DigiWallet</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Apple Specific Styling -->
@@ -14,8 +13,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- User LESS -->
+    <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+    <!-- Less js -->
+    <script>less = { env: 'development'};</script>
+    <script src="js/less.min.js" ></script>
+    <script>less.watch();</script>
   </head>
-  <body>
+  <body id="digiwallet">
     <h1>DigiWallet</h1>
     <p>Welcome to DigiWallet</p>
     <p>Log in</p>
