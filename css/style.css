@@ -5,12 +5,23 @@ html {
 
 body {
   background: #EEE;
-  padding: 5px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+h1 {
+  background: indigo;
+  align-self: normal;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+}
+
+h1, #login-container, .lock {
+  margin-bottom: auto;
 }
 
 #login-container {
@@ -23,6 +34,7 @@ body {
 .lock {
   text-align: center;
   width: 40%;
+  max-width: 100px;
 }
 
 .vertical-form {
