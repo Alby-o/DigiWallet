@@ -199,6 +199,7 @@ nav.left-icons-nav .fa {
 nav.left-icons-nav span {
   border-left: 2px solid;
   padding-left: 10px;
+  display: inline-block;
 }
 
 nav.right-icons-nav a {
@@ -224,6 +225,7 @@ nav.right-icons-nav a::after {
   border-radius: 5px;
   color: white;
   background: #2983ff;
+  border: none;
 }
 
 #list-nav {
@@ -234,12 +236,14 @@ nav.right-icons-nav a::after {
   border: 2px solid #2983ff;
   background: white;
   color: black;
+  text-align: left;
   margin: 5px 0;
 }
 
 #list-nav h3 {
-  text-align: left;
+  text-align: inherit;
   font-size: 20px;
+  color: #2983ff;
   margin: 0;
 }
 
@@ -247,7 +251,15 @@ nav.right-icons-nav a::after {
   margin: 0;
 }
 
-#list-nav p.bal {
+.guide {
+  border: 2px solid #2983ff;
+  padding: 20px 10px;
+  border-radius: 5px;
+  background: white;
+  text-align: center;
+}
+
+.guide p {
   font-size: 14px;
   font-style: italic;
   color: #333;
@@ -260,4 +272,15 @@ nav.right-icons-nav a::after {
 
 #success .icon {
   margin: auto;
+}
+
+/* Accounts */
+#list-nav p.bal {
+  font-size: 14px;
+  font-style: italic;
+  color: #333;
+}
+
+.account {
+  display: none;
 }
