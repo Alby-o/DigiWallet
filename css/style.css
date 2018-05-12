@@ -142,7 +142,7 @@ body.fill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .stretch {
@@ -224,7 +224,6 @@ nav.right-icons-nav a::after {
   position: absolute;
   right: 10px;
   top: calc(50% - 15px);
-
 }
 
 .button, nav ul li a  {
@@ -253,11 +252,18 @@ nav.right-icons-nav a::after {
   margin: 5px 0;
 }
 
+#list-nav.right-icons-nav a::after {
+  color: #2983ff;
+}
+
 #list-nav h3 {
   text-align: inherit;
   font-size: 20px;
-  color: #2983ff;
   margin: 0;
+}
+
+#list-nav li h3 {
+  color: #2983ff;
 }
 
 #list-nav p {
@@ -265,11 +271,15 @@ nav.right-icons-nav a::after {
 }
 
 .guide {
-  border: 2px solid #2983ff;
+  border: 2px solid indigo;
   padding: 20px 10px;
   border-radius: 5px;
   background: white;
   text-align: center;
+}
+
+.guide h3 {
+  color: indigo;
 }
 
 .guide p {
