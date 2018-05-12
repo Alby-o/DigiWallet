@@ -3,8 +3,8 @@ $(document).ready(function() {
   $.getScript("js/validate.js");
 
   $("#login-form").submit(function(event) {
-    var email = $("#email").val().toLowerCase();
-    var password = $("#password").val().toLowerCase();
+    var email = $("#email").val();
+    var password = $("#password").val();
 
     var user = getUser();
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
       return false;
     }
 
-    if(user && email == user.email && password == user.password) {
+    if(user && email.toLowerCase() == user.email.toLowerCase() && password == user.password) {
       $(".feedback").removeClass("fail success").addClass("success").text("Login successful");
       setTimeout(function(){
         window.location = "home.html";
