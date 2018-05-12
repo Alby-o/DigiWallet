@@ -18,19 +18,23 @@
     <!-- User Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
   </head>
-  <body id="index" class="fill">
-    <h1>DigiWallet</h1>
+  <body id="accounts" class="fill">
+    <h1><a class="back" href="home.html"><i class="fa fa-angle-left"></i></a>Accounts</h1>
 
-    <h3 class="subtitle">Welcome to DigiWallet, your personal finance assistant</h3>
-
-    <div class="logo-container">
-      <img class="wallet" src="img/wallet-2.png" alt="wallet">
-    </div>
-
-    <nav id="main-nav">
+    <nav id="list-nav" class="right-icons-nav">
       <ul>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
+        <li><a class="non-implemented account" href="#">
+          <h3>Everyday Spender</h3>
+          <p>Commonwealth Bank</p>
+          <p class="bal">$1,234</p>
+        </a></li>
+      </ul>
+    </nav>
+
+    <nav id="main-nav" class="left-icons-nav">
+      <ul>
+        <li><a class="non-implemented" href="#"><i class="fa fa-plus"></i><span> Add Account</span></a></li>
+        <li><a class="non-implemented" href="#"><i class="fa fa-arrows-h"></i><span> Transfer Betwen Accounts</span></a></li>
       </ul>
     </nav>
 
@@ -40,5 +44,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/apple.js"></script>
+    <script type="text/javascript" src="js/non-implemented.js"></script>
   </body>
 </html>

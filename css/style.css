@@ -37,15 +37,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #ddd;
 }
 
-@keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-}
-
 /* Forms */
 form {
   display: flex;
@@ -96,7 +87,7 @@ button:focus {
   margin: auto;
   width: 60%;
   padding: 5px 10px;
-  border: 2px solid black;
+  border: 2px solid #ccc;
   border-radius: 10px;
   transition: all 0.5s ease;
   color: #444;
@@ -137,7 +128,7 @@ button:focus {
 
 /* Login Page */
 
-#login, #index, #success, #settings {
+.fill {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,22 +166,57 @@ button:focus {
   margin-top: 20px;
 }
 
-#main-nav {
+/* Navigation */
+
+nav {
   width: 80%;
   margin: 40px auto;
 }
 
-#main-nav ul {
+nav ul {
   list-style: none;
   padding: 0;
 }
 
-#main-nav ul li a {
+nav ul li a {
   display: block;
   margin: 10px 0;
 }
 
-.button, #main-nav ul li a  {
+nav.left-icons-nav a {
+  text-align: left;
+  padding-left: 40px;
+  position: relative;
+}
+
+nav.left-icons-nav .fa {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  top: calc(50% - 10px);
+}
+
+nav.left-icons-nav span {
+  border-left: 2px solid;
+  padding-left: 10px;
+}
+
+nav.right-icons-nav a {
+  padding-right: 20px;
+  position: relative;
+  text-align: left;
+}
+
+nav.right-icons-nav a::after {
+  content: "\f105";
+  font: normal normal normal 30px FontAwesome;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 15px);
+
+}
+
+.button, nav ul li a  {
   padding: 10px;
   font-size: 18px;
   text-decoration: none;
@@ -198,6 +224,33 @@ button:focus {
   border-radius: 5px;
   color: white;
   background: #2983ff;
+}
+
+#list-nav {
+  margin-bottom: auto;
+}
+
+#list-nav ul li a {
+  border: 2px solid #2983ff;
+  background: white;
+  color: black;
+  margin: 5px 0;
+}
+
+#list-nav h3 {
+  text-align: left;
+  font-size: 20px;
+  margin: 0;
+}
+
+#list-nav p {
+  margin: 0;
+}
+
+#list-nav p.bal {
+  font-size: 14px;
+  font-style: italic;
+  color: #333;
 }
 
 /* Success */

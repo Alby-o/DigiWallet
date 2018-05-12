@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".update").click(function() {
+  $(".non-implemented").click(function() {
     alert("Not implemented yet!");
   });
 });
