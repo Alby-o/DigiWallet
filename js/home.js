@@ -1,6 +1,4 @@
 $(document).ready(async function() {
-  await $.getScript("js/user.js");
-
   var user = getUser();
 
   if(user) {

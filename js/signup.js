@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  $.getScript("js/user.js");
-  $.getScript("js/validate.js");
 
   $("#signup").submit(function(event) {
     if(validateInputs()) {

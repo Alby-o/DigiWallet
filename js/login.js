@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  $.getScript("js/user.js");
-  $.getScript("js/validate.js");
 
   $("#login-form").submit(function(event) {
     var email = $("#email").val();
