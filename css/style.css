@@ -21,6 +21,16 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+a, .button {
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2983ff;
+}
+
+
 .back {
   position: absolute;
   color: white;
@@ -41,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   margin: 0 auto 20px;
 }
 
@@ -225,7 +235,14 @@ nav.right-icons-nav a::after {
   border-radius: 5px;
   color: white;
   background: #2983ff;
-  border: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.button:hover, nav ul li a:hover {
+  color: #2983ff;
+  border-color: #2983ff;
+  background: white;
 }
 
 #list-nav {
