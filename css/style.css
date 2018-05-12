@@ -27,13 +27,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 10px;
 }
 
-.sign-out {
+.settings {
   position: absolute;
   color: white;
   right: 10px;
 }
 
-.back:active, .sign-out:active {
+.back:active, .settings:active {
   color: #ddd;
 }
 
@@ -137,14 +137,14 @@ button:focus {
 
 /* Login Page */
 
-#login, #index, #success {
+#login, #index, #success, #settings {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
-#login h1, #index h1, #login-container, .lock {
+#login h1, #index h1, #login-container, .fill {
   margin-bottom: auto;
 }
 
