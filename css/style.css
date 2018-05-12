@@ -138,14 +138,14 @@ button:focus {
 
 /* Login Page */
 
-.fill {
+body.fill {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
-#login h1, #index h1, #login-container, .fill {
+.stretch {
   margin-bottom: auto;
 }
 
@@ -245,10 +245,6 @@ nav.right-icons-nav a::after {
   background: white;
 }
 
-#list-nav {
-  margin-bottom: auto;
-}
-
 #list-nav ul li a {
   border: 2px solid #2983ff;
   background: white;
@@ -285,10 +281,6 @@ nav.right-icons-nav a::after {
 /* Success */
 .fa-check-circle.icon {
   color: #51ad49;
-}
-
-#success .icon {
-  margin: auto;
 }
 
 /* Accounts */
