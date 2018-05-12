@@ -30,11 +30,10 @@ class User {
 }
 
 function getUser() {
-  var u = JSON.parse(localStorage.user);
-
-  if(u){
+  if(localStorage.user) {
+    var u = JSON.parse(localStorage.user);
     return new User(u.firstname, u.surname, u.email, u.password, u.accounts);
   }
-
+  
   return null;
 }

@@ -1,13 +1,20 @@
 $(document).ready(function() {
   $.getScript("js/user.js");
+  $.getScript("js/validate.js");
 
   $("#login-form").submit(function(event) {
     var email = $("#email").val().toLowerCase();
     var password = $("#password").val().toLowerCase();
 
-    var user = JSON.parse(localStorage.getItem('user'));
+    var user = getUser();
 
-    if(email == user.email && password == user.password) {
+    if(!validateInputs()) {
+      addWarnings();
+      $(".feedback").removeClass("fail success").addClass("fail").text("Please fill in all details");
+      return false;
+    }
+
+    if(user && email == user.email && password == user.password) {
       $(".feedback").removeClass("fail success").addClass("success").text("Login successful");
       setTimeout(function(){
         window.location = "home.html";
