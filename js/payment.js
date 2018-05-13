@@ -17,6 +17,11 @@ $(document).ready(function() {
     var amount = -1*parseFloat($("#amount").val());
     var description = $("#description").val();
 
+    if(!validateInputs()) {
+      addWarnings();
+      $(".feedback").removeClass("fail success").addClass("fail").text("Please fill in all details");
+      return false;
+    }
 
     for(var i = 0; i < user.accounts.length; i++) {
       if(user.accounts[i].accountNumber == account) {

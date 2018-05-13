@@ -49,10 +49,10 @@
       </nav>
 
       <label for="amount">Amount</label>
-      <input id="amount" type="number" placeholder="000">
+      <input required id="amount" type="number" min="0" step=".01">
 
       <label for="description">Reference</label>
-      <input id="description" type="text" placeholder="e.g. Shopping">
+      <input required id="description" type="text" placeholder="e.g. Shopping">
       <input id="submit" class="button" type="submit" value="Confirm Payment">
     </form>
 
