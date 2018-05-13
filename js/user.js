@@ -14,16 +14,28 @@ class Transaction {
 }
 
 class Account {
-  constructor(accountName, accountNumber, bsb) {
+  constructor(accountName, accountNumber, bsb, bank = null, transactions = null) {
     this.accountName = accountName;
     this.accountNumber = accountNumber;
     this.bsb = bsb;
     this.transactions = [];
 
-    this.bank = banks[Math.floor(Math.random() * banks.length)];
+    if(bank) {
+      this.bank = bank;
+    } else {
+      this.bank = banks[Math.floor(Math.random() * banks.length)];
+    }
 
-    for (var i = 0; i < Math.floor(Math.random() * 20) + 5; i++) {
-      this.generateNewTransaction();
+    if (transactions) {
+      for(var i = 0; i < transactions.length; i++) {
+        var transaction = new Transaction(transactions[i]._value,
+            transactions[i].description);
+        this.transactions.push(transaction);
+      }
+    } else {
+      for (var i = 0; i < Math.floor(Math.random() * 20) + 5; i++) {
+        this.generateNewTransaction();
+      }
     }
   }
 
@@ -52,10 +64,17 @@ class User {
     this.surname = surname;
     this.email = email;
     this.password = password;
+    this.accounts = [];
+
     if(accounts) {
-      this.accounts = accounts;
-    } else {
-      this.accounts = [];
+      for(var i = 0; i < accounts.length; i++) {
+        var account = new Account(accounts[i].accountName,
+            accounts[i].accountNumber,
+            accounts[i].bsb,
+            accounts[i].bank,
+            accounts[i].transactions);
+        this.accounts.push(account);
+      }
     }
   }
 

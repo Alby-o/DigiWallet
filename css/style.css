@@ -276,6 +276,7 @@ nav.right-icons-nav a::after {
   border-radius: 5px;
   background: white;
   text-align: center;
+  display: none;
 }
 
 .guide h3 {
