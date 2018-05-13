@@ -57,6 +57,7 @@ form {
 
 form input, form select {
   margin: 5px 0;
+  background: white;
 }
 
 form label {

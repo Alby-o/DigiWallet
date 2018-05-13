@@ -18,5 +18,7 @@ $(document).ready(function() {
 
   $("#list-nav li a").click(function(event) {
     localStorage.account = $(this).parent().attr('id');
+    window.location = "account.html";
+    event.preventDefault();
   });
 });

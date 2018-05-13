@@ -28,9 +28,8 @@ class Account {
 
     if (transactions) {
       for(var i = 0; i < transactions.length; i++) {
-        var transaction = new Transaction(transactions[i]._value,
+        this.addTransaction(transactions[i]._value,
             transactions[i].description);
-        this.transactions.push(transaction);
       }
     } else {
       for (var i = 0; i < Math.floor(Math.random() * 20) + 5; i++) {
@@ -47,6 +46,10 @@ class Account {
     } else {
       this.transactions.push(new Transaction((Math.random() * 200 + 200).toFixed(2), "Salary"));
     }
+  }
+
+  addTransaction(value, description) {
+    this.transactions.push(new Transaction(value, description));
   }
 
   get balance() {
