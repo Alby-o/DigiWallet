@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>DigiWallet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Apple Specific Styling -->
+    <link rel="apple-touch-icon" href="img/wallet.png">
+    <link rel="apple-touch-startup-image" href="img/wallet.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- User Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
+  </head>
+  <body id="payment">
+    <h1>
+      <a class="back" href="payments.html"><i class="fa fa-angle-left"></i></a>
+      <span class="payment-name">Payment</span>
+      <a class="home" href="home.html"><i class="fa fa-home"></i></a>
+    </h1>
+
+    <div class="feedback">
+      <span>Feedback Text</span>
+    </div>
+
+    <form id="payment-form">
+      <label for="account">Choose Account</label>
+      <select id="account" name="account">
+      </select>
+
+      <label for="recipient">Choose Recipient</label>
+      <select id="recipient" name="recipient">
+        <option value="fiat">Sarah</option>
+        <option value="volvo">John</option>
+        <option value="saab">Matt</option>
+        <option value="audi">Emily</option>
+      </select>
+
+      <nav id="main-nav" class="left-icons-nav">
+        <ul>
+          <li><a class="non-implemented" href="#"><i class="fa fa-plus"></i><span> Add Recipient</span></a></li>
+        </ul>
+      </nav>
+
+      <label for="amount">Amount</label>
+      <input id="amount" type="number" placeholder="000">
+
+      <label for="description">Reference</label>
+      <input id="description" type="text" placeholder="e.g. Shopping">
+      <input id="submit" class="button" type="submit" value="Confirm Payment">
+    </form>
+
+
+    <!-- Bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
+    <script type="text/javascript" src="js/non-implemented.js"></script>
+    <script type="text/javascript" src="js/apple.js"></script>
+
+    <script type="text/javascript" src="js/payment.js"></script>
+  </body>
+</html>
