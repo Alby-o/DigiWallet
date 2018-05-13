@@ -3,12 +3,18 @@ $(document).ready(function() {
 
   $("h1 .payment-name").text(payment);
 
+  var accountNumber = localStorage.account;
+  localStorage.removeItem("account");
+
   var user = getUser();
 
   for(var i = 0; i < user.accounts.length; i++) {
     var option = $("<option></option>")
       .text(user.accounts[i].accountName)
       .attr("value", user.accounts[i].accountNumber);
+    if(user.accounts[i].accountNumber == accountNumber) {
+      option.attr("selected","selected");
+    }
     $("#account").append(option);
   }
 

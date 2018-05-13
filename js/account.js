@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var user = getUser();
   var accountNumber = localStorage.account;
+  localStorage.removeItem("account");
 
   var account = user.accounts.filter(function(a) {return a.accountNumber == accountNumber})[0];
   if(account.accountName.length > 10){
@@ -27,4 +28,10 @@ $(document).ready(function() {
       .find(".description").text(account.transactions[i].description).parent()
       .appendTo("section.item-view");
   }
+
+  $("#main-nav a").click(function(event) {
+    localStorage.account = accountNumber;
+    window.location = "payments.html";
+    event.preventDefault();
+  });
 });
