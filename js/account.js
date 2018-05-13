@@ -3,6 +3,9 @@ $(document).ready(function() {
   var accountNumber = localStorage.account;
 
   var account = user.accounts.filter(function(a) {return a.accountNumber == accountNumber})[0];
+  if(account.accountName.length > 10){
+    account.accountName = account.accountName.substring(0, 10) + "...";
+  }
   $("h1 .account-name").text(account.accountName);
   $("h3").text(account.bank);
   $(".number").text(account.accountNumber);

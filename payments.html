@@ -18,32 +18,29 @@
     <!-- User Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
   </head>
-  <body id="home">
-    <h1><a class="settings" href="settings.html"><i class="fa fa-cog"></i></a>DigiWallet</h1>
+  <body id="payments">
+    <h1>
+      <a class="back" href="home.html"><i class="fa fa-angle-left"></i></a>
+      Payments
+      <a class="home" href="home.html"><i class="fa fa-home"></i></a>
+    </h1>
 
-    <div class="welcome stretch">
-      <h2 class="subtitle">Welcome User</h2>
-      <img class="wallet" src="img/wallet-2.png" alt="wallet">
-    </div>
-
-    <nav id="main-nav">
+    <nav id="main-nav" class="right-icons-nav">
       <ul>
-        <li><a href="accounts.html">Accounts</a></li>
-        <li><a href="payments.html">Payments</a></li>
-        <li><a class="non-implemented" href="#">Reminders</a></li>
-        <li><a class="non-implemented" href="#">Tracking</a></li>
+        <li><a id="bpay" href="payment.html">BPay</a></li>
+        <li><a id="payid" href="payment.html">Pay ID</a></li>
+        <li><a id="transfer" href="payment.html">Direct Transfer</a></li>
       </ul>
     </nav>
+
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="js/user.js"></script>
     <script type="text/javascript" src="js/apple.js"></script>
-    <script type="text/javascript" src="js/non-implemented.js"></script>
+    <script type="text/javascript" src="js/payments.js"></script>
 
-    <script type="text/javascript" src="js/home.js"></script>
   </body>
 </html>
