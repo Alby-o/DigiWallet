@@ -23,8 +23,4 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
-
-  $(".feedback").click(function() {
-    $(this).removeClass("fail success");
-  });
 });

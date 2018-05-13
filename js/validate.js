@@ -7,7 +7,7 @@ function validateInputs() {
   var empty = $("form input").filter(function() {
     return this.value === "";
   });
-  if(empty.length || !validateEmail($("#email").val())) {
+  if(empty.length || ($("#email").length && !validateEmail($("#email").val()))) {
     return false;
   }
   return true;
@@ -39,4 +39,8 @@ $('#email').blur(function() {
   } else {
     $(this).removeClass('warning');
   }
+});
+
+$(".feedback").click(function() {
+  $(this).removeClass("fail success");
 });

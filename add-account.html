@@ -18,37 +18,33 @@
     <!-- User Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
   </head>
-  <body id="accounts" class="fill">
-    <h1><a class="back" href="home.html"><i class="fa fa-angle-left"></i></a>Accounts</h1>
+  <body id="signup">
+    <h1><a class="back" href="accounts.html"><i class="fa fa-angle-left"></i></a>New Account</h1>
 
-    <nav id="list-nav" class="right-icons-nav stretch">
-      <div class="guide">
-        <h3>No Accounts!</h3>
-        <i class="fa fas-keyboard icon"></i>
-        <p>Add an account to get started.</p>
-      </div>
-      <ul>
-        <li><a class="non-implemented account" href="account.html">
-          <h3>Everyday Spender</h3>
-          <p>Commonwealth Bank</p>
-          <p class="bal">$1,234</p>
-        </a></li>
-      </ul>
-    </nav>
+    <div class="feedback">
+      <span>Feedback Text</span>
+    </div>
 
-    <nav id="main-nav" class="left-icons-nav">
-      <ul>
-        <li><a href="add-account.html"><i class="fa fa-plus"></i><span> Add Account</span></a></li>
-        <li><a class="non-implemented" href="#"><i class="fa fa-arrows-h"></i><span> Transfer Betwen Accounts</span></a></li>
-      </ul>
-    </nav>
+    <form id="add-account">
+      <label for="name">Account Name</label>
+      <input id="name" type="text" placeholder="Account Name">
+      <label for="number">Account Number</label>
+      <input id="number" type="number" placeholder="123-456-789-000">
+      <label for="bsb">BSB</label>
+      <input id="bsb" type="number" placeholder="123 456">
+      <input id="submit" class="button" type="submit" value="Add Account">
+    </form>
+
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
     <script type="text/javascript" src="js/apple.js"></script>
-    <script type="text/javascript" src="js/non-implemented.js"></script>
+
+    <script type="text/javascript" src="js/add-account.js"></script>
   </body>
 </html>
