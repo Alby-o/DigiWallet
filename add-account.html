@@ -29,9 +29,9 @@
       <label for="name">Account Name</label>
       <input id="name" type="text" placeholder="Account Name">
       <label for="number">Account Number</label>
-      <input id="number" type="number" placeholder="123-456-789-000">
+      <input id="number" type="text" pattern="\d*" maxlength="9" placeholder="123456789">
       <label for="bsb">BSB</label>
-      <input id="bsb" type="number" placeholder="123 456">
+      <input id="bsb" type="text" pattern="\d*" maxlength="6" placeholder="123456">
       <input id="submit" class="button" type="submit" value="Add Account">
     </form>
 
