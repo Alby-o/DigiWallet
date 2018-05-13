@@ -9,7 +9,7 @@ class Transaction {
   }
 
   get value() {
-    return parseInt(this._value);
+    return parseFloat(this._value);
   }
 }
 

@@ -37,7 +37,7 @@ a:hover {
   left: 10px;
 }
 
-.settings {
+.settings, .home {
   position: absolute;
   color: white;
   right: 10px;
@@ -302,5 +302,38 @@ nav.right-icons-nav a::after {
 }
 
 .account {
+  display: none;
+}
+
+.transaction {
+  position: relative;
+  border-bottom: 1px dotted #aaa;
+}
+
+.transaction:last-child {
+  border: none;
+}
+
+.transaction .description {
+  position: absolute;
+  left: 100px;
+}
+
+/* View Page */
+.item-view {
+  width: 80%;
+  margin: 20px auto;
+  border: 2px solid indigo;
+  border-radius: 10px;
+  padding: 20px;
+  background: white;
+}
+
+.item-view h3, .item-view h4 {
+  text-align: left;
+  color: indigo;
+}
+
+.template {
   display: none;
 }

@@ -9,10 +9,14 @@ $(document).ready(function() {
         .attr('id', user.accounts[i].accountNumber)
         .find("h3").text(user.accounts[i].accountName).parent().parent()
         .find(".bank").text(user.accounts[i].bank).parent().parent()
-        .find(".bal").text("$" + user.accounts[i].balance).parent().parent()
+        .find(".bal").text("$" + parseFloat(user.accounts[i].balance).toFixed(2)).parent().parent()
         .appendTo("#list-nav ul");
     }
   } else {
     $(".guide").show();
   }
+
+  $("#list-nav li a").click(function(event) {
+    localStorage.account = $(this).parent().attr('id');
+  });
 });
