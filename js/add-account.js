@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#add-account").submit(function(event) {
+  $("#add-account-form").submit(function(event) {
     event.preventDefault();
 
     var name = $("#name").val();

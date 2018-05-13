@@ -4,7 +4,9 @@ $(document).ready(function() {
   $("h1 .payment-name").text(payment);
 
   var accountNumber = localStorage.account;
-  localStorage.removeItem("account");
+  var recipient = localStorage.recipient;
+  localStorage.removeItem("recipient");
+  var recipientadded = false;
 
   var user = getUser();
 
@@ -16,6 +18,15 @@ $(document).ready(function() {
       option.attr("selected","selected");
     }
     $("#account").append(option);
+  }
+
+  for(var i = 0; i < user.recipients.length; i++) {
+    var option = $("<option></option>").text(user.recipients[i]);
+    if(user.recipients[i] == recipient && !recipientadded) {
+      option.attr("selected","selected");
+      recipientadded = true;
+    }
+    $("#recipient").append(option);
   }
 
   $("#payment-form").submit(function(event) {
@@ -34,6 +45,8 @@ $(document).ready(function() {
         user.accounts[i].addTransaction(amount, description);
       }
     }
+
+    localStorage.removeItem("account");
 
     localStorage.user = JSON.stringify(user);
     localStorage.success = JSON.stringify({

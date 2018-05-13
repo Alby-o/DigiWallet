@@ -62,12 +62,17 @@ class Account {
 }
 
 class User {
-  constructor(firstname, surname, email, password, accounts = null) {
+  constructor(firstname, surname, email, password, accounts = null, recipients = null) {
     this.firstname = firstname;
     this.surname = surname;
     this.email = email;
     this.password = password;
     this.accounts = [];
+    this.recipients = [];
+
+    if(recipients) {
+      this.recipients = recipients;
+    }
 
     if(accounts) {
       for(var i = 0; i < accounts.length; i++) {
@@ -79,6 +84,10 @@ class User {
         this.accounts.push(account);
       }
     }
+  }
+
+  addRecipient(name) {
+    this.recipients.push(name);
   }
 
   addAccount(accountName, accountNumber, bsb) {
@@ -95,7 +104,7 @@ class User {
 function getUser() {
   if(localStorage.user) {
     var u = JSON.parse(localStorage.user);
-    return new User(u.firstname, u.surname, u.email, u.password, u.accounts);
+    return new User(u.firstname, u.surname, u.email, u.password, u.accounts, u.recipients);
   }
 
   return null;

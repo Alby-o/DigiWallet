@@ -36,20 +36,16 @@
 
       <label for="recipient">Choose Recipient</label>
       <select id="recipient" name="recipient">
-        <option value="fiat">Sarah</option>
-        <option value="volvo">John</option>
-        <option value="saab">Matt</option>
-        <option value="audi">Emily</option>
       </select>
 
       <nav id="main-nav" class="left-icons-nav">
         <ul>
-          <li><a class="non-implemented" href="#"><i class="fa fa-plus"></i><span> Add Recipient</span></a></li>
+          <li><a href="add-recipient.html"><i class="fa fa-plus"></i><span> Add Recipient</span></a></li>
         </ul>
       </nav>
 
       <label for="amount">Amount</label>
-      <input required id="amount" type="number" min="0.01" step=".01">
+      <input required id="amount" type="number" min="0.01" step=".01" placeholder="0.00">
 
       <label for="description">Reference</label>
       <input required id="description" type="text" placeholder="e.g. Shopping">
