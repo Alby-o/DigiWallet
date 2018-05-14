@@ -215,7 +215,7 @@ nav.left-icons-nav span {
 }
 
 nav.right-icons-nav a {
-  padding-right: 20px;
+  padding-right: 40px;
   position: relative;
   text-align: left;
 }
@@ -270,6 +270,14 @@ nav.right-icons-nav a::after {
 
 #list-nav p, .list-nav p {
   margin: 0;
+}
+
+nav input[type="checkbox"] {
+  position: absolute;
+  right: 40px;
+  height: 30px;
+  width: 30px;
+  top: calc(50% - 15px);
 }
 
 .guide {
