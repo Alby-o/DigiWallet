@@ -66,7 +66,7 @@ form label {
   margin: 10px 0 0;
 }
 
-input[type="text"], input[type="password"], input[type="number"], select, textarea {
+input[type="text"], input[type="password"], input[type="number"], input[type="date"], select, textarea {
   border: 2px solid #ccc;
   border-radius: 5px;
   padding: 5px;
@@ -87,6 +87,7 @@ button:focus {
 
 #submit {
   margin-top: 20px;
+  width: 100%;
 }
 
 .feedback {
@@ -245,7 +246,7 @@ nav.right-icons-nav a::after {
   background: white;
 }
 
-#list-nav ul li a {
+#list-nav ul li a, .list-nav ul li a {
   border: 2px solid #2983ff;
   background: white;
   color: black;
@@ -253,21 +254,21 @@ nav.right-icons-nav a::after {
   margin: 5px 0;
 }
 
-#list-nav.right-icons-nav a::after {
+#list-nav.right-icons-nav a::after, .list-nav.right-icons-nav a::after{
   color: #2983ff;
 }
 
-#list-nav h3 {
+#list-nav h3, .list-nav h3 {
   text-align: inherit;
   font-size: 20px;
   margin: 0;
 }
 
-#list-nav li h3 {
+#list-nav li h3, .list-nav li h3 {
   color: #2983ff;
 }
 
-#list-nav p {
+#list-nav p, .list-nav p {
   margin: 0;
 }
 
@@ -390,4 +391,10 @@ nav.right-icons-nav a::after {
   color: #888;
   font-style: italic;
   border: 2px solid transparent;
+}
+
+
+/* Reminders */
+#reminders nav {
+  margin: 0 auto auto;
 }

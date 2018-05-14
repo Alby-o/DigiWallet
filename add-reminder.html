@@ -18,22 +18,25 @@
     <!-- User Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.3">
   </head>
-  <body id="home">
-    <h1><a class="settings" href="settings.html"><i class="fa fa-cog"></i></a>DigiWallet</h1>
+  <body id="add-reminder">
+    <h1>
+      <a class="back" href="reminders.html"><i class="fa fa-angle-left"></i></a>
+      New Reminder
+      <a class="home" href="home.html"><i class="fa fa-home"></i></a>
+    </h1>
 
-    <div class="welcome stretch">
-      <h2 class="subtitle">Welcome User</h2>
-      <img class="wallet" src="img/wallet-2.png" alt="wallet">
-    </div>
+    <form id="add-reminder-form">
+      <label for="title">Title</label>
+      <input id="title" type="text" placeholder="e.g. Water bill">
+      <label for="description">Description</label>
+      <input id="description" type="text" placeholder="e.g. $200 - energex">
+      <label for="date">Due Date</label>
+      <input id="date" type="date">
+      <label for="details">Details</label>
+      <textarea id="details"></textarea>
+      <a href="reminders.html"><input id="submit" class="button" value="Add Reminder"></a>
+    </form>
 
-    <nav id="main-nav">
-      <ul>
-        <li><a href="accounts.html">Accounts</a></li>
-        <li><a href="payments.html">Payments</a></li>
-        <li><a href="reminders.html">Reminders</a></li>
-        <li><a href="tracking-list.html">Tracking</a></li>
-      </ul>
-    </nav>
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -41,9 +44,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
     <script type="text/javascript" src="js/apple.js"></script>
-    <script type="text/javascript" src="js/non-implemented.js"></script>
-
-    <script type="text/javascript" src="js/home.js"></script>
   </body>
 </html>
