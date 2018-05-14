@@ -18,33 +18,34 @@
     <!-- User Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
   </head>
-  <body id="accounts" class="fill">
+  <body id="transfer">
     <h1>
-      <a class="back" href="home.html"><i class="fa fa-angle-left"></i></a>Accounts
+      <a class="back" href="accounts.html"><i class="fa fa-angle-left"></i></a>
+      Transfer
       <a class="home" href="home.html"><i class="fa fa-home"></i></a>
     </h1>
 
-    <nav id="list-nav" class="right-icons-nav stretch">
-      <div class="guide">
-        <h3>No Accounts!</h3>
-        <i class="fa fas-keyboard icon"></i>
-        <p>Add an account to get started.</p>
-      </div>
-      <ul>
-        <li class="account"><a href="account.html">
-          <h3>Everyday Spender</h3>
-          <p class="bank">Commonwealth Bank</p>
-          <p class="bal">$1,234</p>
-        </a></li>
-      </ul>
-    </nav>
+    <div class="feedback">
+      <span>Feedback Text</span>
+    </div>
 
-    <nav id="main-nav" class="left-icons-nav">
-      <ul>
-        <li><a href="add-account.html"><i class="fa fa-plus"></i><span> Add Account</span></a></li>
-        <li><a href="transfer.html"><i class="fa fa-arrows-h"></i><span> Transfer Betwen Accounts</span></a></li>
-      </ul>
-    </nav>
+    <form id="transfer-form">
+      <label for="account">From Account</label>
+      <select id="from" class="account-list" name="from">
+      </select>
+
+      <label for="account">To Account</label>
+      <select id="to" class="account-list" name="to">
+      </select>
+
+      <label for="amount">Amount</label>
+      <input id="amount" type="number" min="0.01" step=".01" placeholder="0.00">
+
+      <label for="description">Reference</label>
+      <input id="description" type="text" placeholder="e.g. Shopping">
+      <input id="submit" class="button" type="submit" value="Confirm Payment">
+    </form>
+
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -52,9 +53,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/user.js"></script>
-    <script type="text/javascript" src="js/apple.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
     <script type="text/javascript" src="js/non-implemented.js"></script>
+    <script type="text/javascript" src="js/apple.js"></script>
 
-    <script type="text/javascript" src="js/accounts.js"></script>
+    <script type="text/javascript" src="js/transfer.js"></script>
   </body>
 </html>
