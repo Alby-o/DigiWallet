@@ -1,6 +1,29 @@
 var banks = ["Commonwealth Bank", "ANZ", "Westpac"];
-
 var expenseDescriptions = ["McDonalds", "Guitar Lessons", "7-11", "Bus fare"];
+
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+
+class Tracking {
+  constructor(paymentName, accountName, recipient, date = null) {
+    this.paymentName = paymentName;
+    this.accountName = accountName;
+    this.recipient = recipient;
+    this.estimatedTime = Math.floor(Math.random() * 3) + 2;
+
+    if(date) {
+      this._date = date;
+    } else {
+      this._date = new Date();
+    }
+  }
+
+  get date() {
+    return this._date.getDate()
+      + " " + months[this._date.getMonth()]
+      + " " + this._date.getFullYear();
+  }
+}
 
 class Transaction {
   constructor(value, description) {
@@ -62,25 +85,38 @@ class Account {
 }
 
 class User {
-  constructor(firstname, surname, email, password, accounts = null, recipients = null) {
+  constructor(firstname, surname, email, password, accounts = null, recipients = null, tracking = null) {
     this.firstname = firstname;
     this.surname = surname;
     this.email = email;
     this.password = password;
     this.accounts = [];
     this.recipients = [];
+    this.tracking = [];
 
     if(recipients) {
       this.recipients = recipients;
     }
 
+    if(tracking) {
+      for(var i = 0; i < tracking.length; i++) {
+        var trackItem = new Tracking(
+          tracking[i].paymentName,
+          tracking[i].accountName,
+          tracking[i].recipient,
+          tracking[i].date);
+        this.tracking.push(trackItem);
+      }
+    }
+
     if(accounts) {
       for(var i = 0; i < accounts.length; i++) {
-        var account = new Account(accounts[i].accountName,
-            accounts[i].accountNumber,
-            accounts[i].bsb,
-            accounts[i].bank,
-            accounts[i].transactions);
+        var account = new Account(
+          accounts[i].accountName,
+          accounts[i].accountNumber,
+          accounts[i].bsb,
+          accounts[i].bank,
+          accounts[i].transactions);
         this.accounts.push(account);
       }
     }
@@ -88,6 +124,11 @@ class User {
 
   addRecipient(name) {
     this.recipients.push(name);
+  }
+
+  addTracking(paymentName, accountName, recipient) {
+    var trackItem = new Tracking(paymentName, accountName, recipient);
+    this.tracking.push(trackItem);
   }
 
   addAccount(accountName, accountNumber, bsb) {
@@ -104,7 +145,7 @@ class User {
 function getUser() {
   if(localStorage.user) {
     var u = JSON.parse(localStorage.user);
-    return new User(u.firstname, u.surname, u.email, u.password, u.accounts, u.recipients);
+    return new User(u.firstname, u.surname, u.email, u.password, u.accounts, u.recipients, u.tracking);
   }
 
   return null;
