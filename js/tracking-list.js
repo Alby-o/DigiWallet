@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $("#list-nav li a").click(function(event) {
     localStorage.tracking = $(this).parent().attr('id');
-    window.location = "#";
+    window.location = "tracking.html";
     event.preventDefault();
   });
 });

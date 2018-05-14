@@ -354,3 +354,32 @@ nav.right-icons-nav a::after {
 .tracking {
   display: none;
 }
+
+.transfer {
+  border-top: 2px solid indigo;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.transfer p {
+  position: relative;
+}
+
+.transfer p span {
+  position: absolute;
+  left: 150px;
+}
+
+.progress {
+  margin-bottom: 10px;
+}
+
+.item-view .from {
+  margin: 0;
+}
+
+.item-view .to {
+  font-size: 1.5em;
+  color: #444;
+  margin: 0;
+}

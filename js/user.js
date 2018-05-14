@@ -11,12 +11,17 @@ function guidGenerator() {
 }
 
 class Tracking {
-  constructor(paymentName, accountName, value, recipient, date = null, id = null) {
+  constructor(paymentName, accountName, value, recipient, estimatedTime = null, date = null, id = null) {
     this.paymentName = paymentName;
     this.accountName = accountName;
     this.value = value;
     this.recipient = recipient;
-    this.estimatedTime = Math.floor(Math.random() * 3) + 2;
+
+    if(estimatedTime) {
+      this.estimatedTime = estimatedTime;
+    } else {
+      this.estimatedTime = Math.floor(Math.random() * 3) + 2;
+    }
 
     if(id) {
       this.id = id;
@@ -118,6 +123,7 @@ class User {
           tracking[i].accountName,
           tracking[i].value,
           tracking[i].recipient,
+          tracking[i].estimatedTime,
           tracking[i].date,
           tracking[i].id);
         this.tracking.push(trackItem);
