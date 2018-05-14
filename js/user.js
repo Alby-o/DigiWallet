@@ -3,13 +3,26 @@ var expenseDescriptions = ["McDonalds", "Guitar Lessons", "7-11", "Bus fare"];
 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+function guidGenerator() {
+    var S4 = function() {
+       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+    };
+    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+}
 
 class Tracking {
-  constructor(paymentName, accountName, recipient, date = null) {
+  constructor(paymentName, accountName, value, recipient, date = null, id = null) {
     this.paymentName = paymentName;
     this.accountName = accountName;
+    this.value = value;
     this.recipient = recipient;
     this.estimatedTime = Math.floor(Math.random() * 3) + 2;
+
+    if(id) {
+      this.id = id;
+    } else {
+      this.id = guidGenerator();
+    }
 
     if(date) {
       this._date = date;
@@ -103,8 +116,10 @@ class User {
         var trackItem = new Tracking(
           tracking[i].paymentName,
           tracking[i].accountName,
+          tracking[i].value,
           tracking[i].recipient,
-          tracking[i].date);
+          tracking[i].date,
+          tracking[i].id);
         this.tracking.push(trackItem);
       }
     }
@@ -126,8 +141,8 @@ class User {
     this.recipients.push(name);
   }
 
-  addTracking(paymentName, accountName, recipient) {
-    var trackItem = new Tracking(paymentName, accountName, recipient);
+  addTracking(paymentName, accountName, value, recipient) {
+    var trackItem = new Tracking(paymentName, accountName, value, recipient);
     this.tracking.push(trackItem);
   }
 

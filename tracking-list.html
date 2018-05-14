@@ -18,22 +18,27 @@
     <!-- User Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1.2">
   </head>
-  <body id="home">
-    <h1><a class="settings" href="settings.html"><i class="fa fa-cog"></i></a>DigiWallet</h1>
+  <body id="tracking-list" class="fill">
+    <h1>
+      <a class="back" href="home.html"><i class="fa fa-angle-left"></i></a>Tracking
+      <a class="home" href="home.html"><i class="fa fa-home"></i></a>
+    </h1>
 
-    <div class="welcome stretch">
-      <h2 class="subtitle">Welcome User</h2>
-      <img class="wallet" src="img/wallet-2.png" alt="wallet">
-    </div>
-
-    <nav id="main-nav">
+    <nav id="list-nav" class="right-icons-nav stretch">
+      <div class="guide">
+        <h3>No payments in progress!</h3>
+        <i class="fa fas-keyboard icon"></i>
+        <p>Make a transaction to view tracking.</p>
+      </div>
       <ul>
-        <li><a href="accounts.html">Accounts</a></li>
-        <li><a href="payments.html">Payments</a></li>
-        <li><a class="non-implemented" href="#">Reminders</a></li>
-        <li><a href="tracking-list.html">Tracking</a></li>
+        <li class="tracking"><a href="tracking.html">
+          <h3>Description</h3>
+          <p class="bal">value</p>
+          <p>To: <span class="recipient"></span></p>
+        </a></li>
       </ul>
     </nav>
+
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -44,6 +49,6 @@
     <script type="text/javascript" src="js/apple.js"></script>
     <script type="text/javascript" src="js/non-implemented.js"></script>
 
-    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/tracking-list.js"></script>
   </body>
 </html>

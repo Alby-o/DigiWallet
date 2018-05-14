@@ -31,6 +31,7 @@ $(document).ready(function() {
 
   $("#payment-form").submit(function(event) {
     var account = $("#account").val();
+    var recipient = $("#recipient").val();
     var amount = -1*parseFloat($("#amount").val());
     var description = $("#description").val();
 
@@ -45,6 +46,8 @@ $(document).ready(function() {
         user.accounts[i].addTransaction(amount, description);
       }
     }
+
+    user.addTracking(description, account, amount, recipient);
 
     localStorage.removeItem("account");
 
