@@ -387,7 +387,7 @@ nav.right-icons-nav a::after {
 
 .non-implemented, .non-implemented:hover {
   background: #ccc;
-  color: #333;
+  color: #888;
   font-style: italic;
   border: 2px solid transparent;
 }
