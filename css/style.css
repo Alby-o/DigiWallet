@@ -8,6 +8,7 @@ html {
 body {
   background: #EEE;
   min-height: 100%;
+  padding-top: 100px;
 }
 
 h1 {
@@ -15,6 +16,10 @@ h1 {
   align-self: normal;
   padding: 20px 0;
   color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
