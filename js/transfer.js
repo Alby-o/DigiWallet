@@ -10,6 +10,14 @@ $(document).ready(function() {
     $(".account-list").append(option);
   }
 
+  $("#to, #from").change(function() {
+    var from = $("#from").val();
+    var to = $("#to").val();
+    if(from != to) {
+      $("#to, #from").removeClass("warning");
+    }
+  });
+
 
   $("#transfer-form").submit(function(event) {
     var from = $("#from").val();
@@ -25,6 +33,7 @@ $(document).ready(function() {
 
     if(from == to) {
       $(".feedback").removeClass("fail success").addClass("fail").text("Cannot transfer to the same account");
+      $("#to, #from").addClass("warning");
       return false;
     }
 

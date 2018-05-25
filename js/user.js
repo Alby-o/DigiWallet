@@ -161,6 +161,14 @@ class User {
     var account = new Account(accountName, accountNumber, bsb);
     this.accounts.push(account);
   }
+
+  deleteAccount(accountNumber) {
+    for(var i = 0; i < this.accounts.length; i++) {
+      if(this.accounts[i].accountNumber == accountNumber) {
+        this.accounts.splice(i, 1);
+      }
+    }
+  }
 }
 
 function getUser() {
