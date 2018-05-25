@@ -8,17 +8,17 @@ $(document).ready(function() {
 
     if(!validateInputs()) {
       addWarnings();
-      $(".feedback").removeClass("fail success").addClass("fail").text("Please fill in all details");
+      showGuide("Please fill in all details");
       return false;
     }
 
     if(user && email.toLowerCase() == user.email.toLowerCase() && password == user.password) {
-      $(".feedback").removeClass("fail success").addClass("success").text("Login successful");
+      // $(".feedback").removeClass("fail success").addClass("success").text("Login successful");
       setTimeout(function(){
         window.location = "home.html";
       }, 1000);
     } else {
-      $(".feedback").removeClass("fail success").addClass("fail").text("Username or password incorrect");
+      showGuide("Username or password incorrect");
     }
 
     event.preventDefault();

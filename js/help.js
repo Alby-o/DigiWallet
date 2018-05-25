@@ -2,7 +2,7 @@ var help = {};
 var softBack = false;
 
 help["about"] = "<p>DigiWallet is an application that lets you bring together bank accounts across multiple services and platforms. View your accounts, transfer your money, pay someone and view your transfer progress all in one place.</p>";
-help["accounts"] =  "<p>To begin using DigiWallet, you need to link your accounts. To link your account to DigiWallet you need to know your account name, BSB and account number. If You need help finding this information, contact your banking institution.</p>" +
+help["accounts"] =  "<p>To begin using DigiWallet, you need to link your banking accounts. To link your account to DigiWallet you need to know your account name, BSB and account number. If You need help finding this information, contact your banking institution.</p>" +
                     "<p>Once an account has been linked, you can access your transaction history, transfer between your accounts and pay other people using your linked accounts.</p>";
 
 $(document).ready(function() {
@@ -27,9 +27,9 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-  $(".home").click(function(event) {
-    window.location = "home.html";
-    event.preventDefault();
-  });
+  // $(".home").click(function(event) {
+  //   window.location = "home.html";
+  //   event.preventDefault();
+  // });
 
 });

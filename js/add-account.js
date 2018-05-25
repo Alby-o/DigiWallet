@@ -26,7 +26,7 @@ $(document).ready(function() {
       window.location = "success.html";
 
     } catch (e) {
-      $(".feedback").removeClass("fail success").addClass("fail").text("Account number already added");
+      showGuide("Account number already added");
     }
 
   });

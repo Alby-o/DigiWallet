@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     if(!validateInputs()) {
       addWarnings();
-      $(".feedback").removeClass("fail success").addClass("fail").text("Please fill in all details");
+      showGuide("Please fill in all details");
       return false;
     }
 

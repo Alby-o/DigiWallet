@@ -4,7 +4,7 @@ function validateEmail(email) {
 }
 
 function validateInputs() {
-  var empty = $("form input").filter(function() {
+  var empty = $("form input, form select").filter(function() {
     return this.value === "";
   });
   if(empty.length || ($("#email").length && !validateEmail($("#email").val()))) {
@@ -14,7 +14,7 @@ function validateInputs() {
 }
 
 function addWarnings() {
-  $("form input").filter(function() {
+  $("form input, form select").filter(function() {
     if(!$(this).val()) {
       $(this).addClass('warning');
     }
@@ -44,3 +44,11 @@ $('#email').blur(function() {
 $(".feedback").click(function() {
   $(this).removeClass("fail success");
 });
+
+function showGuide(text) {
+  $(".feedback").removeClass("fail success")
+    .addClass("fail")
+    .text(text)
+    .fadeIn(100)
+    .delay(2000).fadeOut(1000);
+}

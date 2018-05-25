@@ -27,12 +27,12 @@ $(document).ready(function() {
 
     if(!validateInputs()) {
       addWarnings();
-      $(".feedback").removeClass("fail success").addClass("fail").text("Please fill in all details");
+      showGuide("Please fill in all details");
       return false;
     }
 
     if(from == to) {
-      $(".feedback").removeClass("fail success").addClass("fail").text("Cannot transfer to the same account");
+      showGuide("Cannot transfer to the same account");
       $("#to, #from").addClass("warning");
       return false;
     }

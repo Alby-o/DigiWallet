@@ -11,14 +11,14 @@ html {
 }
 
 body {
-  background: #EEE;
+  background: #eee;
   min-height: 100%;
   padding-top: 100px;
   font-family: sans-serif;
 }
 
 h1 {
-  background: indigo;
+  background: #192C47;
   align-self: normal;
   padding: 20px 0;
   color: white;
@@ -39,25 +39,25 @@ a, .button {
 
 a:hover {
   text-decoration: none;
-  color: #2983ff;
+  color: white;
 }
 
-
-.back {
+.settings, .home, .back {
   position: absolute;
   color: white;
+}
+
+.back {
   left: 10px;
 }
 
 .settings, .home {
-  position: absolute;
-  color: white;
   right: 10px;
 }
 
-.back:active, .settings:active {
+/* .back:active, .settings:active {
   color: #ddd;
-}
+} */
 
 /* Forms */
 form {
@@ -103,7 +103,7 @@ button:focus {
 }
 
 .feedback {
-  opacity: 0;
+  display: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -113,19 +113,16 @@ button:focus {
   padding: 5px 10px;
   border: 2px solid #ccc;
   border-radius: 10px;
-  transition: all 0.5s ease;
   color: #444;
   text-align: center;
 }
 
 .success {
-  opacity: 1;
   border-color: green;
   background-color: #d5fbd5;
 }
 
 .fail {
-  opacity: 1;
   background-color: #fffafa;
   border-color: #ff6f6f;
 }
@@ -240,26 +237,26 @@ nav.right-icons-nav a::after {
   top: calc(50% - 15px);
 }
 
-.button, nav ul li a  {
+.button, nav ul li a {
   padding: 10px;
   font-size: 18px;
   text-decoration: none;
   text-align: center;
   border-radius: 5px;
   color: white;
-  background: #2983ff;
+  background: #0093C6;
   border: 2px solid transparent;
   cursor: pointer;
 }
 
-.button:hover, nav ul li a:hover {
-  color: #2983ff;
-  border-color: #2983ff;
+/* .button:hover, nav ul li a:hover {
+  color: #0093C6;
+  border-color: #0093C6;
   background: white;
-}
+} */
 
 #list-nav ul li a, .list-nav ul li a {
-  border: 2px solid #2983ff;
+  border: 2px solid #0093C6;
   background: white;
   color: black;
   text-align: left;
@@ -267,7 +264,7 @@ nav.right-icons-nav a::after {
 }
 
 #list-nav.right-icons-nav a::after, .list-nav.right-icons-nav a::after{
-  color: #2983ff;
+  color: #0093C6;
 }
 
 #list-nav h3, .list-nav h3 {
@@ -277,7 +274,7 @@ nav.right-icons-nav a::after {
 }
 
 #list-nav li h3, .list-nav li h3 {
-  color: #2983ff;
+  color: #0093C6;
 }
 
 #list-nav p, .list-nav p {
@@ -293,7 +290,7 @@ nav input[type="checkbox"] {
 }
 
 .guide {
-  border: 2px solid indigo;
+  border: 2px solid #192C47;
   padding: 20px 10px;
   border-radius: 5px;
   background: white;
@@ -302,7 +299,7 @@ nav input[type="checkbox"] {
 }
 
 .guide h3 {
-  color: indigo;
+  color: #192C47;
 }
 
 .guide p {
@@ -345,7 +342,7 @@ nav input[type="checkbox"] {
 .item-view {
   width: 80%;
   margin: 20px auto;
-  border: 2px solid indigo;
+  border: 2px solid #192C47;
   border-radius: 10px;
   padding: 20px;
   background: white;
@@ -353,7 +350,7 @@ nav input[type="checkbox"] {
 
 .item-view h3, .item-view h4 {
   text-align: left;
-  color: indigo;
+  color: #192C47;
 }
 
 .template {
@@ -377,7 +374,7 @@ nav input[type="checkbox"] {
 }
 
 .transfer {
-  border-top: 2px solid indigo;
+  border-top: 2px solid #192C47;
   margin-top: 40px;
   padding-top: 20px;
 }
