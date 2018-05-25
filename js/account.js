@@ -37,16 +37,17 @@ $(document).ready(function() {
 
   $("#main-nav .remove").click(function(event) {
     user.deleteAccount(account.accountNumber);
-
-    localStorage.user = JSON.stringify(user);
-    localStorage.success = JSON.stringify({
-      btn1 : "Accounts",
-      href1 : "accounts.html",
-      btn2 : "Home",
-      href2 : "home.html",
-      text : "removed your account " + account.accountName
-    });
-    window.location = "success.html";
+    if(confirm('Are you sure you want to remove this account?')){
+      localStorage.user = JSON.stringify(user);
+      localStorage.success = JSON.stringify({
+        btn1 : "Accounts",
+        href1 : "accounts.html",
+        btn2 : "Home",
+        href2 : "home.html",
+        text : "removed your account " + account.accountName
+      });
+      window.location = "success.html";
+    }
     event.preventDefault();
   });
 });
